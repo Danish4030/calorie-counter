@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Calorie Intake Calculator</title>
+</head>
+<body>
+
+<script>
+// Constants for calorie calculation (These are just example values)
+var CALORIES_PER_KG = 30; // Calories per kilogram
+var METABOLIC_RATE_CONSTANT = 70; // Metabolic rate constant
+
+// Get weight and height from the user
+var weight = parseFloat(prompt("Enter your weight in kilograms:"));
+var height = parseFloat(prompt("Enter your height in centimeters:")) / 100; // Convert height to meters
+
+// Calculate the daily calorie intake
+var dailyCalorieIntake = CALORIES_PER_KG * weight + METABOLIC_RATE_CONSTANT * height;
+
+// Display the result using an alert box
+alert("Your daily calorie intake is approximately " + Math.round(dailyCalorieIntake) + " calories.");
+
+// Display the result on the webpage
+document.write("Your daily calorie intake is approximately " + Math.round(dailyCalorieIntake) + " calories.");
+</script>
+
+</body>
+</html>
